@@ -1,6 +1,5 @@
 [![Banner1](IMG/logo.png)](https://qi-ting-zhang.github.io/sileo/)
-本人不维护也不具备任何维护脚本的能力，所有代码均来自[大神](https://t.me/lanjieguanggao/937429)开源及[网络搜集](https://m.baidu.com/?from=1029078t
-)备份。如有侵权，联系[本人](https://qi-ting-zhang.github.io/sileo/)删库跑路；如有代码需要托管，鄙人愿意代劳。
+本人不维护也不具备任何维护脚本的能力，所有代码均来自[大神](https://t.me/lanjieguanggao/937429)开源及[网络搜集](https://m.baidu.com/?from=1029078t)备份。如有侵权，联系[本人](https://qi-ting-zhang.github.io/sileo/)删库跑路；如有代码需要托管，鄙人愿意代劳。
 
 #### 插件列表
 
@@ -13,7 +12,7 @@
     <th>重写</th>
   </tr>
   <tr>
-    <td rowspan="6"><strong>⚾</strong></td>
+    <td rowspan="18"><strong>⚾</strong></td>
   <tr>
     <td><a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%0A%20%20%22filter_remote%22%20%3A%20%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FQi-Ting-Zhang%2Frepo%2Frefs%2Fheads%2Fmaster%2FPlugins%2Femby.plugin%2C%20tag%3DEmby%E5%88%86%E6%B5%81%2C%20update-interval%3D172800%2C%20opt-parser%3Dtrue%2C%20enabled%3Dtrue%22%0A%20%20%5D%0A%7D
     ">Emby服务器</a></td>
