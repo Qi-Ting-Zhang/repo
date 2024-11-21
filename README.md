@@ -2,7 +2,7 @@
 本人不维护也不具备任何维护脚本的能力，所有代码均来自[大神](https://t.me/lanjieguanggao/937429)开源及[网络搜集](https://m.baidu.com/?from=1029078t)备份。如有侵权，联系[本人](https://qi-ting-zhang.github.io/sileo/)删库跑路；如有代码需要托管，鄙人愿意代劳。
 
 #### iPhone
-[屏蔽升级描述文件](https://raw.githubusercontent.com/Qi-Ting-Zhang/repo/refs/heads/master/iPhone/noota18.mobileconfig)
+[屏蔽升级描述文件](https://raw.githubusercontent.com/Qi-Ting-Zhang/repo/master/iphone/noota18.mobileconfig)
 #### 插件列表
 
 > [!胜天半子]
