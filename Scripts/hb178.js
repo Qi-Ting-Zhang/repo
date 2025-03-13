@@ -14,6 +14,8 @@ if (body) {
         }
       ];
 
+      let randomCombination = songCombinations[0];  // 使用第一个歌曲组合
+
       obj.data.songname = randomCombination.song_name;
       obj.data.name = randomCombination.song_singer;
       obj.data.cover = randomCombination.cover;
