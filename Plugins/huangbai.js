@@ -3,7 +3,7 @@
  #!openUrl= https://qi-ting-zhang.github.io/sileo/
  #!author=祁厅长[https://h5.clewm.net/?url=qr61.cn%2FoMuCi0%2FqHe9QuO]
  #!homepage=https://github.com/Qi-Ting-Zhang/repo
- #!icon=http://fmc-75014.picgzc.qpic.cn/consult_viewer_pic__8a35e754-8ce7-4009-b0ee-09df56862eb0_1741823716897.jpg
+ #!icon=http://fmc-75014.picgzc.qpic.cn/consult_viewer_pic__6de99351-7963-4361-968c-079e21edc0d6_1741944910772.jpg
 
 [Script]
 
