@@ -1,4 +1,4 @@
-[Script]
+[Rewrite]
 // misaka点歌
 http-response ^https:\/\/api\.dragonlongzhu\.cn\/.* url script-response-body https://raw.githubusercontent.com/Qi-Ting-Zhang/repo/refs/heads/master/Scripts/mkqqyy.js
 // 黄白178
