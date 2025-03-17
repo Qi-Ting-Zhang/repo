@@ -1,5 +1,5 @@
 [![Banner1](IMG/logo.png)](https://qi-ting-zhang.github.io/sileo/)
-本人不维护也不具备任何维护脚本的能力，所有代码均来自[大神](https://t.me/lanjieguanggao/937429)开源及[网络搜集](https://m.baidu.com/?from=1029078t)备份。如有侵权，联系[本人](https://qi-ting-zhang.github.io/sileo/)删库跑路；如有代码需要托管，鄙人愿意代劳。
+~~本人不维护也不具备任何维护脚本的能力~~，已经有一点了，多数代码均来自[大神](https://t.me/lanjieguanggao/937429)开源及[网络搜集](https://m.baidu.com/?from=1029078t)备份。如有侵权，联系[本人](https://qi-ting-zhang.github.io/sileo/)删库跑路；如有代码需要托管，鄙人愿意代劳。
 
 #### iPhone
 [屏蔽升级描述文件](https://raw.githubusercontent.com/Qi-Ting-Zhang/repo/master/iphone/noota18.mobileconfig)
@@ -9,9 +9,10 @@
 > 所有插件均可点击链接一键添加，无需手动复制安装。
 <table>
   <tr>
-    <th>类别</th>
+    <th>Quantumult X</th>
     <th>分流</th>
     <th>重写</th>
+    <th>Loon</th>
   </tr>
   <tr>
     <td rowspan="18"><strong>⚾</strong></td>
@@ -20,6 +21,8 @@
     ">Emby服务器</a></td>
     <td><a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%0A%20%20%22rewrite_remote%22%20%3A%20%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FQi-Ting-Zhang%2Frepo%2Frefs%2Fheads%2Fmaster%2FPlugins%2Famap.plugin%2C%20tag%3D%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%8E%BB%E5%B9%BF%E5%AD%90%2C%20update-interval%3D172800%2C%20opt-parser%3Dtrue%2C%20enabled%3Dtrue%22%0A%20%20%5D%0A%7D
     ">高德地图</a></td>
+    <td><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/Qi-Ting-Zhang/repo/refs/heads/master/Plugins/huangbai.js
+    ">微信点歌卡片</a></td>
   </tr>
   <tr>
     <td><a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%0A%20%20%22filter_remote%22%20%3A%20%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FQi-Ting-Zhang%2Frepo%2Frefs%2Fheads%2Fmaster%2FPlugins%2Ftestflight.plugin%2C%20tag%3DTestFlight%2C%20update-interval%3D172800%2C%20opt-parser%3Dtrue%2C%20enabled%3Dtrue%22%0A%20%20%5D%0A%7D
