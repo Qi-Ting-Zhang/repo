@@ -8,11 +8,6 @@ if (body) {
     if (obj && obj.data) {
       // 组合数据库
       const themeData = {
-        默认: {
-          song_name: "默认歌曲名称",
-          song_singer: "默认歌手",
-          cover: "https://default.com/cover.jpg"
-        },
         红包: {
           song_name: "恭喜发财,大吉大利！",
           song_singer: "领取红包",
@@ -32,31 +27,41 @@ if (body) {
 
       const getSmartRandom = () => {
         const history = JSON.parse($persistentStore.read("comboHistory") || "[]");
-        const candidates = Object.keys(themeData).filter(k => !['默认','随机'].includes(k) && !history.includes(k));
+        const candidates = Object.keys(themeData).filter(k => !history.includes(k));
         
         // 当所有组合都使用过后重置历史
-        if(candidates.length === 0) {
-          $persistentStore.write("[]", "comboHistory");
-          return Object.keys(themeData).find(k => k === '红包');
-        }
-        
-        const selected = candidates[Math.floor(Math.random() * candidates.length)];
-        $persistentStore.write(JSON.stringify([...history, selected].slice(-3)), "comboHistory");
-        return selected;
+        return candidates.length > 0 
+          ? candidates[Math.floor(Math.random() * candidates.length)]
+          : (() => {
+              $persistentStore.write("[]", "comboHistory");
+              return '红包';
+            })();
       };
 
-      let selected = $argument.combo || '默认';
+
+      let selected = $argument.combo;
       
       if(selected === '随机') {
         selected = getSmartRandom();
-        console.log(`智能随机选择：${selected}`);
+        console.log(`[智能选择] 本次随机结果：${selected}`);
+        $persistentStore.write(
+          JSON.stringify([...JSON.parse($persistentStore.read("comboHistory") || "[]"), selected].slice(-2)),
+          "comboHistory"
+        );
       }
 
+      // 仅当有效选择时修改数据
+      if(selected && selected !== '默认' && themeData[selected]) {
 
-      if(themeData[selected]) {
         obj.data.songname = themeData[selected].song_name;  
         obj.data.name = themeData[selected].song_singer;    
-        obj.data.cover = themeData[selected].cover;        
+        obj.data.cover = themeData[selected].cover;         
+        
+        console.log(`已应用组合：${selected}`);
+      } else {
+        console.log("保持原始数据不变");
+        // 记录原始数据用于调试
+        $persistentStore.write(JSON.stringify(obj.data), "originalData");
       }
 
       $done({ body: JSON.stringify(obj), headers: headers });
@@ -65,7 +70,7 @@ if (body) {
     }
   } catch (e) {
     console.log("贾队长温馨提示错误:", e);
-    $notification.post("脚本异常", String(e), "");
+    $notification.post("脚本故障", `错误详情：${e.message}`, "");
     $done({ body: body, headers: headers });
   }
 } else {

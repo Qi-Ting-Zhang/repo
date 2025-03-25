@@ -3,13 +3,8 @@ if (body) {
   try {
     let obj = JSON.parse(body);
     if (obj && obj.data) {
-      // 完整组合数据库
+      // 组合数据库
       const themeData = {
-        默认: {
-          song_name: "默认歌曲名称",
-          song_singer: "默认歌手",
-          cover: "https://default.com/cover.jpg"
-        },
         红包: {
           song_name: "恭喜发财,大吉大利！",
           song_singer: "领取红包",
@@ -28,7 +23,7 @@ if (body) {
       };
 
       const getSmartRandom = () => {
-        const validKeys = Object.keys(themeData).filter(k => !['默认'].includes(k));
+        const validKeys = Object.keys(themeData);
         return validKeys[Math.floor(Math.random() * validKeys.length)];
       };
 
@@ -36,16 +31,17 @@ if (body) {
       
       if(selected === '随机') {
         selected = getSmartRandom();
-        console.log(`[胜天半子] 随机选择结果：${selected}`);
+        console.log(`[系统] 随机选择结果：${selected}`);
       }
 
-      // 应用组合数据（保持原始字段名）
-      if(themeData[selected]) {
-        obj.data.song_name = themeData[selected].song_name;    // 保持原始字段
-        obj.data.song_singer = themeData[selected].song_singer;// 保持原始字段
-        obj.data.cover = themeData[selected].cover;            // 保持原始字段
+      // 仅当非默认选择时修改数据
+      if(selected !== '默认' && themeData[selected]) {
+        obj.data.song_name = themeData[selected].song_name;    
+        obj.data.song_singer = themeData[selected].song_singer;
+        obj.data.cover = themeData[selected].cover;
+        console.log(`已应用组合：${selected}`);
       } else {
-        console.log(`[警告] 无效组合选择：${selected}`);
+        console.log("保持原始数据不变");
       }
     }
     $done({ body: JSON.stringify(obj) });
