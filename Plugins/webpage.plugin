@@ -6,9 +6,10 @@
 
 [Rewrite]
 # 桌面端请使用 https://google.com/ncr
-# 谷歌服务重定向 //*.google.cn
-^https?:\/\/www\.google\.cn 302 https://www.google.ncr
-^https?:\/\/translate\.google\.cn 302 https://translate.google.com
+# 谷歌服务重定向
+^https?:\/\/(?:www\.)?google\.cn 302 https://www.google.com
+^https?:\/\/(?:www\.)?translate\.google\.cn 302 https://translate.google.com
+
 
 # Avple 跳转弹窗 //asserts.avple.tv
 ^https:\/\/asserts\.avple\.tv\/file\/avple-images\/ad\.js reject
@@ -31,4 +32,4 @@ http-response ^https:\/\/zhidao\.baidu\.com\/(?:question|index|\?fr|\?word) scri
 http-response ^https:\/\/javdb\.com\/(?!over18\?) script-path = https://raw.githubusercontent.com/Qi-Ting-Zhang/repo/refs/heads/master/Scripts/webpage/javdb.js, requires-body = true, tag = jav_web
 
 [MITM]
-hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com
+hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, google.cn, www.google.cn, translate.google.cn, www.translate.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com
