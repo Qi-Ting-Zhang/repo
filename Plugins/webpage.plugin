@@ -7,7 +7,7 @@
 [Rewrite]
 # 桌面端请使用 https://google.com/ncr
 # 谷歌服务重定向 //*.google.cn
-^https?:\/\/www\.google\.cn 302 https://www.google.com
+^https?:\/\/www\.google\.cn 302 https://www.google.ncr
 ^https?:\/\/translate\.google\.cn 302 https://translate.google.com
 
 # Avple 跳转弹窗 //asserts.avple.tv
